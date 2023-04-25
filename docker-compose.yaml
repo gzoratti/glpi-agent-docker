@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  glpi-agent:
+    tty: true
+    image: gzoratti/glpi-agent:1.4
+    network_mode: "host"
+    environment:
+      - "url=${url}"
+      - "tag=${tag}"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "2"
+          memory: 4G
+      restart_policy:
+        condition: on-failure
