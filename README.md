@@ -38,7 +38,6 @@ To deploy this project with docker-compose
 
 
 ```
-### 3. Docker Build
 
 ## Authors
 
